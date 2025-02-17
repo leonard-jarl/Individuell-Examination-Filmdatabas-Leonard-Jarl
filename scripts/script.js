@@ -1,22 +1,15 @@
-if(window.location.pathname === '/' || window.location.pathname === '/html/index.html') {
-    console.log('index.html');
+import oData from './utils/data.js';
+import { fetchMovieDetails, fetchMovieSearch, fetchRecommendedMovies } from './modules/api.js';
+import { shuffleMovies } from './utils/utils.js';
+import { setTrailerSources } from './components/trailerCard.js';
 
-} else if(window.location.pathname === '/html/favorites.html') {
-    console.log('favorites.html');
+async function init() {
+    await fetchRecommendedMovies();
+    await fetchMovieSearch();
+    // await fetchMovieDetails();
 
-} else if(window.location.pathname === '/html/movie.html') {
-    console.log('movie.html');
-
-} else if(window.location.pathname === '/html/search.html') {
-    console.log('search.html');
+    shuffleMovies(oData.recommendedMovies);
+    setTrailerSources(oData.shuffledMovies);
 }
 
-import { fetchMovieDetails, fetchMovieSearch, fetchRecommendedMovies } from './modules/api.js';
-import oData from './utils/data.js';
-
-await fetchRecommendedMovies();
-await fetchMovieSearch();
-await fetchMovieDetails();
-console.log(oData.recommendedMovies);
-console.log(oData.movieSearch);
-console.log(oData.movieDetails);
+await init();
