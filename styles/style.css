@@ -32,6 +32,39 @@ body {
     margin: 0 auto;
 }
 
+.popular-title {
+    color: white;
+    text-align: center;
+    margin: 2rem;
+}
+
+.card-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.star {
+    position: absolute;
+    background-color: #ea00ff7a;
+    border-radius: 100%;
+    padding: 0.5rem;
+    height: 5%;
+    margin: 0.5rem;
+}
+
+.movieImage {
+    width: 100%;
+    aspect-ratio: 2/3;
+}
+
+.movieTitle {
+    color: white;
+    margin-top: 1rem;
+    border-left: solid 1px white;
+    padding-left: 0.5rem;
+}
+
 .d-none {
     display: none;
 }
