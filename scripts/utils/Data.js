@@ -3,6 +3,7 @@ const oData = {
     movieSearch : [],
     movieDetails : [],
     shuffledMovies : [],
+    trailerSources : [],
 }
 
 export default oData;

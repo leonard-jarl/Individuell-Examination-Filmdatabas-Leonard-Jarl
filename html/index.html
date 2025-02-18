@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Movie Database</title>
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
     <script
       src="https://kit.fontawesome.com/f300007e95.js"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="/scripts/script.js"></script>
+    <script type="module" src="../scripts/script.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="content-wrapper header__flex">
-        <a href="/html/index.html"
-          ><img class="header__logo" src="/assets/logo.png" alt="logotype"
+        <a href="index.html"
+          ><img class="header__logo" src="../assets/logo.png" alt="logotype"
         /></a>
         <form class="header__form" id="searchForm">
           <input
@@ -26,7 +26,7 @@
           />
           <button class="header__form-btn" id="searchBtn">Search</button>
         </form>
-        <a href="/html/favorites.html" class="header__fav-btn" id="favBtn"
+        <a href="./favorites.html" class="header__fav-btn" id="favBtn"
           >Favorites</a
         >
       </div>
@@ -37,24 +37,18 @@
       <div class="content-wrapper">
         <section class="trailers">
           <img
-            src="/assets/icons/arrow-left.svg"
+            src="../assets/icons/arrow-left.svg"
             alt="left navigation arrow"
             class="trailers__arrow trailers__arrow--left"
             data-direction="left"
           />
           <img
-            src="/assets/icons/arrow-right.svg"
+            src="../assets/icons/arrow-right.svg"
             alt="right navigation arrow"
             class="trailers__arrow trailers__arrow--right"
             data-direction="right"
           />
-          <section id="trailersContainer" class="trailers__container">
-            <iframe class="trailers__video trailers__video-1" src=""></iframe>
-            <iframe class="trailers__video trailers__video-2" src=""></iframe>
-            <iframe class="trailers__video trailers__video-3" src=""></iframe>
-            <iframe class="trailers__video trailers__video-4" src=""></iframe>
-            <iframe class="trailers__video trailers__video-5" src=""></iframe>
-          </section>
+          <section class="trailers__container"></section>
         </section>
       </div>
     </section>
