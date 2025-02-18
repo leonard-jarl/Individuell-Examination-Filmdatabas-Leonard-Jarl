@@ -8,7 +8,7 @@
     --primary-bg: #000000;
     --primary-white: #ffffff;
     --primary-grey: #1A1A1A;
-    --text-yellow: #F5C518;
+    --text-yellow: yellow;
 }
 
 /* Base */
@@ -16,6 +16,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Tahoma';
 }
 
 body {
@@ -27,6 +28,7 @@ body {
 .content-wrapper {
     max-width: 1180px;
     margin: 0 auto;
+    padding: 0 2rem;
 }
 .center {
     margin: 0 auto;
@@ -44,13 +46,14 @@ body {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.star {
+.movieStar {
     position: absolute;
-    background-color: #ea00ff7a;
+    background-color: rgba(143, 143, 143, 0.521);
     border-radius: 100%;
     padding: 0.5rem;
-    height: 5%;
     margin: 0.5rem;
+    max-width: 50px;
+    transition: all .2s ease-in-out;
 }
 
 .movieImage {
@@ -114,4 +117,55 @@ body {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.card-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 1200px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .header {
+        padding: 0;
+    }
+
+    .content-wrapper {
+        padding: 1rem;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .header__logo {
+        content: url(/assets/icons/Logo-small.svg);
+        height: 50px;
+        width: 50px;
+        background: transparent;
+    }
+
+    .header__fav-btn {
+        content: url(/assets/icons/star.png);
+        background-color: yellow;
+        border-radius: 100%;
+        padding: 0.5rem;
+        height: 50px;
+    }
+
+    .header__form {
+        height: 50px;
+    }
 }
