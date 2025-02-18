@@ -40,10 +40,21 @@ body {
     margin: 2rem;
 }
 
+.favorites-title {
+    color: white;
+    text-align: center;
+    margin: 2rem;
+}
+
 .card-container {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(4, 1fr);
+}
+
+.movieCard:hover {
+    transform: translate(-10px, -10px);
+    cursor: pointer;
 }
 
 .movieStar {
