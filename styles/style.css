@@ -35,13 +35,13 @@ body {
 }
 
 .popular-title {
-    color: white;
+    color: var(--text-yellow);
     text-align: center;
     margin: 2rem;
 }
 
 .favorites-title {
-    color: white;
+    color: var(--text-yellow);
     text-align: center;
     margin: 2rem;
 }
