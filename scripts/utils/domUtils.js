@@ -4,5 +4,6 @@ const trailersContainer = document.getElementById('trailersContainer');
 const leftArrow = document.querySelector('.trailers__arrow--left');
 const rightArrow = document.querySelector('.trailers__arrow--right');
 const cardContainer = document.getElementById('cardContainer');
+const movieCard = document.getElementById('movieCard');
 
-export { searchInput, cardContainer, trailers, trailersContainer, leftArrow, rightArrow };
+export { searchInput, cardContainer, trailers, trailersContainer, leftArrow, rightArrow, movieCard };
