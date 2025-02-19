@@ -1,3 +1,4 @@
+import oData from '../utils/data.js';
 import { cardContainer } from '../utils/domUtils.js';
 
 export function renderMovies(movie) {
@@ -18,15 +19,15 @@ export function renderMovies(movie) {
     movieImage.classList.add('movieImage');
     if (movie.Poster > '') {
         movieImage.src = movie.Poster;
-    } else { 
+    } else {
         movieImage.src = '/assets/icons/missing-poster.svg';
     }
 
     movieTitle.classList.add('movieTitle');
     movieTitle.textContent = movie.Title;
 
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    const isFavorite = favorites.some(fav => fav.imdbID === movie.imdbID);
+    oData.favoriteMovies = JSON.parse(localStorage.getItem('favoriteMovies')) || [];
+    const isFavorite = oData.favoriteMovies.some(fav => fav.imdbID === movie.imdbID);
 
     if (isFavorite) {
         movieCard.setAttribute('favorite', 'true');
@@ -36,13 +37,13 @@ export function renderMovies(movie) {
         movieCard.setAttribute('favorite', 'false');
         movieStar.src = '/assets/icons/star.png';
     }
-    
+
     cardContainer.appendChild(movieCard);
     movieCard.appendChild(movieStar);
     movieCard.appendChild(movieImage);
     movieCard.appendChild(movieTitle);
 
-    movieCard.addEventListener('click', (event) => {
+    movieStar.addEventListener('click', (event) => {
         if (event.target.classList.contains('movieStar')) {
             event.preventDefault();
             toggleFavorite(event.target, movieCard);
@@ -56,24 +57,24 @@ function toggleFavorite(star, card) {
     const Title = card.getAttribute('title');
     const Poster = card.querySelector('.movieImage').src;
 
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    let favoriteMovies = JSON.parse(localStorage.getItem('favoriteMovies')) || [];
 
     if (!isFavorite) {
         star.src = '/assets/icons/star_filled.png';
-        star.style.backgroundColor = 'rgba(229, 255, 0, 0.521)'; 
+        star.style.backgroundColor = 'rgba(229, 255, 0, 0.521)';
         card.setAttribute('favorite', 'true');
 
-        if (!favorites.some(movie => movie.imdbID === imdbID)) {
-            favorites.push({ imdbID, Title, Poster });
-            console.log('Saving movie to favorites:', { imdbID, Title, Poster });
+        if (!favoriteMovies.some(movie => movie.imdbID === imdbID)) {
+            favoriteMovies.push({ imdbID, Title, Poster });
         }
     } else {
         star.src = '/assets/icons/star.png';
         star.style.backgroundColor = '';
         card.setAttribute('favorite', 'false');
 
-        favorites = favorites.filter(movie => movie.imdbID !== imdbID);
+        favoriteMovies = favoriteMovies.filter(movie => movie.imdbID !== imdbID);
     }
 
-    localStorage.setItem('favorites', JSON.stringify(favorites));    
+    localStorage.setItem('favoriteMovies', JSON.stringify(favoriteMovies));
+    oData.favoriteMovies = favoriteMovies;
 }

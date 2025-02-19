@@ -12,8 +12,8 @@ export async function fetchMovieSearch(searchInput) {
     oData.movieSearch = movieSearch.Search;
 }
 
-export async function fetchMovieDetails(imdbKey) {
-    const response = await fetch(`http://www.omdbapi.com/?apikey=2cb49faf&plot=full&i=${imdbKey}`);
+export async function fetchMovieDetails(imdbID) {
+    const response = await fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=2cb49faf`);
     let movieDetails = await response.json();
     oData.movieDetails = movieDetails;
 }
