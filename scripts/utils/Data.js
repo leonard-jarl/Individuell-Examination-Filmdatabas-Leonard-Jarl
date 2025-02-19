@@ -4,6 +4,7 @@ const oData = {
     movieDetails : [],
     shuffledMovies : [],
     trailerSources : [],
+    favoriteMovies : [],
 }
 
 export default oData;
