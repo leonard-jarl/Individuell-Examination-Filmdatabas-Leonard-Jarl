@@ -20,5 +20,5 @@ const movieStar = document.getElementById('movieStar');
 
 export {
     searchInput, cardContainer, trailers, trailersContainer, leftArrow, rightArrow, movieCard, movieTitle, moviePoster,
-    movieAge, movieGenre, movieRuntime, movieReleaseDate, movieRating, moviePlot, movieDirector, movieWriter, movieActors, movieStar
+    movieAge, movieGenre, movieRuntime, movieReleaseDate, movieRating, moviePlot, movieDirector, movieWriter, movieActors, movieStar,
 };

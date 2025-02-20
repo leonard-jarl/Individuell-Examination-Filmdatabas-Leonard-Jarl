@@ -28,6 +28,10 @@ export function toggleFavorite(imdbID, Title, Poster, starElement) {
     oData.favoriteMovies = favoriteMovies;
 }
 
-export function getMovieIDFromURL() {
+export function getImdbID() {
     return new URLSearchParams(window.location.search).get('imdbID');
+}
+
+export function getSearchQuery() {
+    return new URLSearchParams(window.location.search).get('search');
 }
