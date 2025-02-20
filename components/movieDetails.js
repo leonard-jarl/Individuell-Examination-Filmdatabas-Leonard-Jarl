@@ -4,7 +4,7 @@ import {
     movieTitle, moviePoster, movieAge, movieGenre, movieRuntime,
     movieReleaseDate, movieRating, moviePlot, movieDirector,
     movieWriter, movieActors, movieStar
-} from '../utils/domUtils.js';
+} from '../modules/domUtils.js';
 
 export function displayMovieDetails(movie) {
     moviePoster.src = movie.Poster !== 'N/A' ? movie.Poster : '/assets/icons/missing-poster.svg';

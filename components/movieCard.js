@@ -1,5 +1,5 @@
 import oData from '../modules/Data.js';
-import { cardContainer } from '../utils/domUtils.js';
+import { cardContainer } from '../modules/domUtils.js';
 import { toggleFavorite } from '../modules/utils.js';
 
 export function renderMovies(movie) {
