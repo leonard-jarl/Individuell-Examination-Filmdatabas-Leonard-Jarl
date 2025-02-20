@@ -1,3 +1,4 @@
+
 export function renderTrailers(movie, num) {
     const iFrameRef = document.createElement(`iframe`);
     iFrameRef.classList.add(`trailers__video`, `trailers__video-${num}`);
@@ -35,4 +36,3 @@ function changeTrailer(event, trailerList, trailerArray) {
         item.classList.add(`trailers__video-${i + 1}`)
     });
 }
-

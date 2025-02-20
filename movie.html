@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/f300007e95.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="/script.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header__content">
+        <a href="/index.html">
+          <img class="header__logo" src="/assets/logo.png" alt="Logo" />
+        </a>
+      </div>
+    </header>
+
+    <!-- Movie Details Section -->
+    <main class="container">
+      <section class="movie">
+        <div class="movie__header">
+          <h1 class="movie__title" id="movieTitle">Loading...</h1>
+          <img
+            class="favorite-icon"
+            id="movieStar"
+            src="/assets/icons/star.png"
+            alt="Favorite"
+          />
+        </div>
+
+        <div class="movie__content">
+          <img
+            class="movie__poster"
+            id="moviePoster"
+            src=""
+            alt="Movie Poster"
+          />
+
+          <div class="movie__details">
+            <hr />
+            <ul class="movie__info-list">
+              <li id="movieAge"></li>
+              <li id="movieGenre"></li>
+              <li id="movieRuntime"></li>
+              <li id="movieReleaseDate"></li>
+              <li id="movieRating"></li>
+            </ul>
+            <hr />
+
+            <h2>Plot:</h2>
+            <p id="moviePlot"></p>
+            <hr />
+
+            <ul class="movie__credits">
+              <li id="movieDirector"></li>
+              <li id="movieWriter"></li>
+              <li id="movieActors"></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

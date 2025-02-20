@@ -1,0 +1,155 @@
+.content-wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.center {
+  margin: 0 auto;
+}
+
+.popular-title {
+  color: var(--text-yellow);
+  text-align: center;
+  margin: 2rem;
+}
+
+.favorites-title {
+  color: var(--text-yellow);
+  text-align: center;
+  margin: 2rem;
+}
+
+.card-container {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.movieCard:hover {
+  transform: translate(-10px, -10px);
+  cursor: pointer;
+}
+
+.movieStar {
+  position: absolute;
+  background-color: rgba(143, 143, 143, 0.521);
+  border-radius: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  max-width: 45px;
+  transition: all 0.2s ease-in-out;
+}
+
+.movieImage {
+  width: 100%;
+  aspect-ratio: 2/3;
+}
+
+.movieTitle {
+  color: white;
+  margin-top: 1rem;
+  border-left: solid 1px white;
+  padding-left: 0.5rem;
+}
+
+.d-none {
+  display: none;
+}
+
+.header {
+  background-color: var(--header-grey);
+  width: 100%;
+  padding: 1.5rem;
+  z-index: 999;
+}
+
+.header__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  width: 150px;
+  background-color: yellow;
+}
+
+.header__form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header__input {
+  width: 50%;
+  padding: 1rem;
+  border-radius: 2rem 0 0 2rem;
+  border: none;
+}
+
+.header__form-btn {
+  border-radius: 0 2rem 2rem 0;
+  width: 5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.header__fav-btn {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--text-yellow);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.card-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 1200px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header {
+    padding: 0;
+  }
+
+  .content-wrapper {
+    padding: 1rem;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .header__logo {
+    content: url(/assets/icons/Logo-small.svg);
+    height: 50px;
+    width: 50px;
+    background: transparent;
+  }
+
+  .header__fav-btn {
+    content: url(/assets/icons/star.png);
+    background-color: yellow;
+    border-radius: 100%;
+    padding: 0.5rem;
+    height: 50px;
+  }
+
+  .header__form {
+    height: 50px;
+  }
+}
