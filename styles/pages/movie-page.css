@@ -1,22 +1,9 @@
-/* Body Styles */
-body {
-  background-color: var(--color-black);
-  color: var(--color-white);
-}
-
-/* Utility Classes */
-.hidden {
-  display: none;
-}
-
-/* General Layout */
 .container {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-/* Movie Section */
 .movie {
   margin-top: 2rem;
 }
@@ -36,26 +23,23 @@ body {
   background-color: rgba(143, 143, 143, 0.521);
   border-radius: 100%;
   padding: 0.5rem;
-  height: 2rem;
+  max-width: 40px;
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
   margin-left: 1rem;
 }
 
-/* Movie Content Layout */
 .movie__content {
   display: flex;
   gap: 2rem;
   align-items: stretch;
 }
 
-/* Movie Poster */
 .movie__poster {
   object-fit: contain;
   border-radius: 5px;
 }
 
-/* Movie Details */
 .movie__details {
   flex-grow: 1;
   display: flex;
@@ -74,7 +58,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Responsive Styles */
 @media screen and (max-width: 1200px) {
   .movie__content {
     flex-direction: column;

@@ -2,8 +2,7 @@ const oData = {
     recommendedMovies: [],
     movieSearch: [],
     movieDetails: [],
-    shuffledMovies: [],
-    trailerSources: [],
+    trailers: [],
     favoriteMovies: [],
 }
 

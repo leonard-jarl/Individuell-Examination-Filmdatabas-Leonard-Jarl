@@ -1,3 +1,4 @@
+
 export function renderTrailers(movie, num) {
     const iFrameRef = document.createElement(`iframe`);
     iFrameRef.classList.add(`trailers__video`, `trailers__video-${num}`);
@@ -6,7 +7,7 @@ export function renderTrailers(movie, num) {
 
     const trailerList = document.querySelectorAll(`.trailers__video`);
     const trailerArray = Array.from(trailerList);
-
+    
     document.querySelectorAll(`.trailers__arrow`).forEach(arrow => {
         arrow.addEventListener(`click`, (event) => {
             changeTrailer(event, trailerList, trailerArray);
@@ -35,4 +36,3 @@ function changeTrailer(event, trailerList, trailerArray) {
         item.classList.add(`trailers__video-${i + 1}`)
     });
 }
-

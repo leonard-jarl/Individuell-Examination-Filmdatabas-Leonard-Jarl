@@ -1,0 +1,27 @@
+/* Base */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Tahoma";
+  }
+  
+  body {
+    background-color: var(--primary-bg);
+    max-width: 100%;
+  }
+  
+  h1,
+  h2,
+  p,
+  li {
+    color: var(--primary-white);
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  hr {
+    margin: 2rem 0;
+  }  

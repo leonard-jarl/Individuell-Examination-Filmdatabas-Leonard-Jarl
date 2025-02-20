@@ -1,10 +1,10 @@
-import oData from './utils/data.js';
+import oData from './modules/Data.js';
 import { fetchMovieDetails, fetchMovieSearch, fetchRecommendedMovies } from './modules/api.js';
-import { renderTrailers } from './modules/caroussel.js';
-import { shuffleMovies } from './utils/utils.js';
+import { renderTrailers } from './components/carousel.js';
+import { shuffleMovies, getMovieIDFromURL } from './modules/utils.js';
 import { renderMovies } from './components/movieCard.js';
-import { fetchFavoriteMovies } from './favorites.js';
-import { displayMovieDetails, getMovieIDFromURL } from './modules/movieDetails.js';
+import { fetchFavoriteMovies } from './modules/favorites.js';
+import { displayMovieDetails } from './components/movieDetails.js';
 
 oData.favoriteMovies = JSON.parse(localStorage.getItem('favoriteMovies')) || [];
 
@@ -14,7 +14,7 @@ if (window.location.pathname.includes('index.html') || window.location.pathname 
     await fetchRecommendedMovies();
     shuffleMovies(oData.recommendedMovies);
 
-    oData.shuffledMovies.forEach((movie, index) => {
+    oData.trailers.forEach((movie, index) => {
         renderTrailers(movie, index + 1);
     });
     oData.recommendedMovies.forEach((movie) => {
