@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Movie Database</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/f300007e95.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <section class="content-wrapper header__flex">
+        <a href="/index.html"
+          ><img class="header__logo" src="../assets/logo.png" alt="logotype"
+        /></a>
+        <form class="header__form" id="searchForm">
+          <input
+            class="header__input"
+            id="searchInput"
+            type="text"
+            aria-label="Search"
+          />
+          <button class="header__form-btn" id="searchBtn" type="submit">
+            Search
+          </button>
+        </form>
+        <a href="/favorites.html" class="header__fav-btn" id="favBtn"
+          >Favorites</a
+        >
+      </section>
+    </header>
+
+    <!-- Trailer Caroussel -->
+    <section>
+      <section class="content-wrapper">
+        <section class="trailers">
+          <img
+            src="../assets/icons/arrow-left.svg"
+            alt="left navigation arrow"
+            class="trailers__arrow trailers__arrow--left"
+            data-direction="left"
+          />
+          <img
+            src="../assets/icons/arrow-right.svg"
+            alt="right navigation arrow"
+            class="trailers__arrow trailers__arrow--right"
+            data-direction="right"
+          />
+          <section class="trailers__container"></section>
+        </section>
+      </section>
+    </section>
+
+    <!-- Our recommended movies section -->
+    <section>
+      <section class="content-wrapper center">
+        <h1 class="popular-title">Recommendations</h1>
+        <section class="card-container" id="cardContainer"></section>
+      </section>
+    </section>
+  </body>
+</html>

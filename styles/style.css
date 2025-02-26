@@ -1,0 +1,7 @@
+@import url("base/variables.css");
+@import url("base/base.css");
+@import url("components/carousel.css");
+@import url("components/movie-card.css");
+@import url("pages/movie-page.css");
+@import url("utils/utils.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
