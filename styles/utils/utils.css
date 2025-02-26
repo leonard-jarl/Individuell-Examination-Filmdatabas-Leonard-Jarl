@@ -7,18 +7,6 @@
   margin: 0 auto;
 }
 
-.popular-title {
-  color: var(--text-yellow);
-  text-align: center;
-  margin: 2rem;
-}
-
-.favorites-title {
-  color: var(--text-yellow);
-  text-align: center;
-  margin: 2rem;
-}
-
 .card-container {
   display: grid;
   gap: 2rem;
@@ -39,11 +27,6 @@
   margin: 0.5rem;
   max-width: 45px;
   transition: all 0.2s ease-in-out;
-}
-
-.movieImage {
-  width: 100%;
-  aspect-ratio: 2/3;
 }
 
 .movieTitle {
@@ -127,7 +110,7 @@
   }
 
   .content-wrapper {
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .card-container {
@@ -141,8 +124,8 @@
   }
 
   .header__fav-btn {
-    content: url(/assets/icons/star.png);
-    background-color: yellow;
+    content: url(/assets/icons/star_filled.png);
+    background-color: rgba(229, 255, 0, 0.52);
     border-radius: 100%;
     padding: 0.5rem;
     height: 50px;

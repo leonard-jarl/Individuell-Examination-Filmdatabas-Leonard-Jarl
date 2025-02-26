@@ -23,10 +23,10 @@ export function renderMovies(movie) {
     const movieImage = document.createElement('img');
     movieImage.className = 'movieImage';
     movieImage.src = movie.Poster || missingPosterSrc;
-    movieImage.alt = 'movie poster'
+    movieImage.alt = `movie poster of the movie ${movie.Title}`
     movieImage.onerror = () => (movieImage.src = missingPosterSrc);
 
-    const movieTitle = document.createElement('h3');
+    const movieTitle = document.createElement('h2');
     movieTitle.className = 'movieTitle';
     movieTitle.textContent = movie.Title;
 

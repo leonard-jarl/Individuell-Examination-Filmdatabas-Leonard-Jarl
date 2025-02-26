@@ -7,6 +7,8 @@ import { fetchFavoriteMovies } from './modules/localStorage.js';
 import { displayMovieDetails } from './components/movieDetails.js';
 import { searchInput } from './modules/domUtils.js';
 
+oData.favoriteMovies = JSON.parse(localStorage.getItem('favoriteMovies')) || [];
+
 document.getElementById('searchForm')?.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -23,7 +25,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (pathname.includes('index.html') || pathname === '/') {
         await fetchRecommendedMovies();
         shuffleMovies(oData.recommendedMovies);
-
         oData.trailers.forEach((movie, index) => renderTrailers(movie, index + 1));
         oData.recommendedMovies.forEach(renderMovies);
 
