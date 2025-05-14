@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         oData.recommendedMovies.forEach(renderMovies);
 
     } else if (pathname.includes('favorites.html')) {
-        const favoriteMovies = JSON.parse(localStorage.getItem('favoriteMovies')) || [];
+        const favoriteMovies = JSON.parse(sessionStorage.getItem('favoriteMovies')) || [];
         favoriteMovies.forEach(renderMovies);
 
     } else if (pathname.includes('movie.html')) {

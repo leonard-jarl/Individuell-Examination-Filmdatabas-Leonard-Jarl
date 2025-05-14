@@ -11,7 +11,7 @@ export function shuffleMovies(movies) {
 }
 
 export function toggleFavorite(imdbID, Title, Poster, starElement) {
-    let favoriteMovies = JSON.parse(localStorage.getItem('favoriteMovies')) || [];
+    let favoriteMovies = JSON.parse(sessionStorage.getItem('favoriteMovies')) || [];
     const isFavorite = favoriteMovies.some(movie => movie.imdbID === imdbID);
 
     if (isFavorite) {
@@ -24,7 +24,7 @@ export function toggleFavorite(imdbID, Title, Poster, starElement) {
         starElement.style.backgroundColor = 'rgba(229, 255, 0, 0.521)';
     }
 
-    localStorage.setItem('favoriteMovies', JSON.stringify(favoriteMovies));
+    sessionStorage.setItem('favoriteMovies', JSON.stringify(favoriteMovies));
     oData.favoriteMovies = favoriteMovies;
 }
 

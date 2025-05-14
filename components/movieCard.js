@@ -30,7 +30,7 @@ export function renderMovies(movie) {
     movieTitle.className = 'movieTitle';
     movieTitle.textContent = movie.Title;
 
-    oData.favoriteMovies = JSON.parse(localStorage.getItem('favoriteMovies')) || [];
+    oData.favoriteMovies = JSON.parse(sessionStorage.getItem('favoriteMovies')) || [];
     const isFavorite = oData.favoriteMovies.some(fav => fav.imdbID === movie.imdbID);
 
     if (isFavorite) {
