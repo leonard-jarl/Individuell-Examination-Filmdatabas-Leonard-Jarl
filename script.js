@@ -3,11 +3,8 @@ import { fetchMovieDetails, fetchMovieSearch, fetchRecommendedMovies } from './m
 import { renderTrailers } from './components/carousel.js';
 import { shuffleMovies, getImdbID, getSearchQuery } from './modules/utils.js';
 import { renderMovies } from './components/movieCard.js';
-import { fetchFavoriteMovies } from './modules/localStorage.js';
 import { displayMovieDetails } from './components/movieDetails.js';
 import { searchInput } from './modules/domUtils.js';
-
-oData.favoriteMovies = JSON.parse(localStorage.getItem('favoriteMovies')) || [];
 
 document.getElementById('searchForm')?.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -29,8 +26,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         oData.recommendedMovies.forEach(renderMovies);
 
     } else if (pathname.includes('favorites.html')) {
-        await fetchFavoriteMovies();
-        oData.favoriteMovies.forEach(renderMovies);
+        const favoriteMovies = JSON.parse(localStorage.getItem('favoriteMovies')) || [];
+        favoriteMovies.forEach(renderMovies);
 
     } else if (pathname.includes('movie.html')) {
         const imdbID = getImdbID();
