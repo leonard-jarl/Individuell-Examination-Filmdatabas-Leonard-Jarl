@@ -1,3 +1,7 @@
+.movieCard {
+  transition: all 0.3s ease;
+}
+
 .movieCard:hover {
   transform: translate(-10px, -10px);
   cursor: pointer;
