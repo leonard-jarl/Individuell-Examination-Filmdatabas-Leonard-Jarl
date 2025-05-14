@@ -19,24 +19,24 @@ document.getElementById('searchForm')?.addEventListener('submit', (event) => {
 document.addEventListener('DOMContentLoaded', async () => {
     const pathname = window.location.pathname;
 
-    if (pathname.includes('index.html') || pathname === '/') {
+    if (pathname.includes('index') || pathname === '/') {
         await fetchRecommendedMovies();
         shuffleMovies(oData.recommendedMovies);
         oData.trailers.forEach((movie, index) => renderTrailers(movie, index + 1));
         oData.recommendedMovies.forEach(renderMovies);
 
-    } else if (pathname.includes('favorites.html')) {
+    } else if (pathname.includes('favorites')) {
         const favoriteMovies = JSON.parse(localStorage.getItem('favoriteMovies')) || [];
         favoriteMovies.forEach(renderMovies);
 
-    } else if (pathname.includes('movie.html')) {
+    } else if (pathname.includes('movie')) {
         const imdbID = getImdbID();
         if (imdbID) {
             await fetchMovieDetails(imdbID);
             displayMovieDetails(oData.movieDetails);
         }
 
-    } else if (pathname.includes('search.html')) {
+    } else if (pathname.includes('search')) {
         const search = getSearchQuery();
         if (search) {
             await fetchMovieSearch(search);
